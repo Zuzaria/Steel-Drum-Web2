@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+.parent {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.parent img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+.parent .text {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);/* Fallback color */
+  background: rgba(0, 0, 0, 0.5);/* Black background with opacity */
+  color: #ffffff;
+  width: 75%; /* Adjust this value as needed */
+  padding: 20px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  padding: 10px;
+  background: rgb(156, 156, 117);
+}
+
+/* Header*/
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgb(111, 131, 1);
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Top nav bar */
+.topnav {
+  overflow: hidden;
+  background-color: #c2c512;
+}
+
+/* Style the top nav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #697000;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color:rgb(111, 131, 1);
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Credits */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery a {
+  text-decoration: none;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+</style>
+
+<head>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Steel Drum Simulator</h1>
+    <h2>One of the best sims out there :]</h2>
+    <h3>Made by Josh, Emmet and Helena</h3>
+  </div>
+  
+  <div class="topnav">  
+    <a href="index.html">Home</a>
+    <a href="documentation.html">Process</a>
+    <a href="https://editor.p5js.org/JoshFuji/sketches/M2qaj_SDX">P5.JS Editor</a>
+  </div>
+  
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <center><h1>Process</h1></center>
+        <div class="parent">
+          <img src="steel drum set up.png" alt="steel drum">
+          <div class="text">
+            <h1>Research</h1> 
+            <p>We figured that to even do this correctly, we needed to know how a steel drum worked, so we looked at some references to help us out.</p>
+            <p>In doing so, we also learned how certain notes would work and in a way to make it easier for us and the user, we designed it do that you may switch between different variants of notes via one tap of a button!</p>
+          </div>
+        </div>
+        <hr>
+        <div class="parent">
+          <center><h1>Design</h1></center>
+          <img src="draft 1.jpg" alt="draft 1">
+          <div class="text">
+            <h1>Our Drafts</h1>
+            <p>This is one of the drafts Emmet came up with for the steel drum and we went off of these. I declared that there should be different tones, so we would need three modes which was perfect for us since we all needed to contribute art of some kind; allowing us to make some kind of artistic flare for each mode.</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-container center">
+        <div class="gallery">
+          <a href="draft 2.jpg" target="_blank"><img src="draft 2.jpg" alt="Design Image 1"></a>
+          <a href="draft 3.jpg" target="_blank"><img src="draft 3.jpg" alt="Design Image 2"></a>
+          <a href="draft 4.jpg" target="_blank"><img src="draft 4.jpg" alt="Design Image 3"></a>
+          <a href="draft 5.jpg" target="_blank"><img src="draft 5.jpg" alt="Design Image 4"></a>
+          <a href="sound example.png" target="_blank"><img src="sound example.png" alt="Design Image 5"></a>
+          <!-- Add more images as needed -->
+        </div>
+      </div>
+      <div class="card">
+        <h3>Created With</h3>
+        <p>Makey Makey</p><br>
+        <p>P5.JS</p><br>
+        <p>Many braincells lost in time...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><text-align:right><p>Da Jokers Baby 2024 </text-align:right></p>
+  </div>
+
+</body>
+</html>
